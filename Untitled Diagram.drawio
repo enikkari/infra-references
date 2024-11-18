@@ -4,8 +4,11 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-290" y="173" width="1050" height="390" as="geometry" />
+        </mxCell>
         <mxCell id="Ndoymu9ar-45ZAlMpeQ7-2" value="Amazon SQS&lt;div&gt;Received messages ueue&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
-          <mxGeometry x="20" y="294" width="80" height="124" as="geometry" />
+          <mxGeometry x="20" y="280" width="80" height="124" as="geometry" />
         </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ndoymu9ar-45ZAlMpeQ7-3" target="Ndoymu9ar-45ZAlMpeQ7-2">
           <mxGeometry relative="1" as="geometry" />
@@ -15,20 +18,41 @@
             <mxPoint y="14" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ndoymu9ar-45ZAlMpeQ7-3" target="PSyk0_Ey8W_nqYgnj86M-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-12" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;put processed messges&lt;div&gt;to queue&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-11">
+          <mxGeometry x="-0.0496" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="Ndoymu9ar-45ZAlMpeQ7-3" value="Message prosessing lambda&lt;div&gt;triggered by SQS queue&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="210" y="320" width="69" height="72" as="geometry" />
+          <mxGeometry x="210" y="306" width="69" height="72" as="geometry" />
         </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-3" target="PSyk0_Ey8W_nqYgnj86M-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-19" value="Send" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-5">
+          <mxGeometry x="-0.0617" relative="1" as="geometry">
+            <mxPoint x="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-3" target="PSyk0_Ey8W_nqYgnj86M-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-14" value="Read messages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-13">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-3" value="Sending lambda" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="560" y="320" width="69" height="72" as="geometry" />
+          <mxGeometry x="620" y="304.5" width="69" height="72" as="geometry" />
         </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-4" value="FInal destination API" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Data_Factory.svg;" vertex="1" parent="1">
-          <mxGeometry x="810" y="324" width="68" height="68" as="geometry" />
+          <mxGeometry x="810" y="306" width="68" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="PSyk0_Ey8W_nqYgnj86M-6" value="Amazon SQS" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
-          <mxGeometry x="420" y="320" width="80" height="100" as="geometry" />
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-6" value="Amazon SQS&lt;div&gt;processed messages&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="80" height="124" as="geometry" />
         </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-7" target="Ndoymu9ar-45ZAlMpeQ7-2">
           <mxGeometry relative="1" as="geometry" />
@@ -38,8 +62,21 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-390" y="340.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-17" value="Incoming message" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-16">
+          <mxGeometry x="0.1972" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="PSyk0_Ey8W_nqYgnj86M-7" value="Message trigger&lt;div&gt;for example API Gateway API endpoint&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="-180" y="294" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-18" value="AWS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="180" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
