@@ -1,14 +1,45 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="Page-1" id="bqU7K1zKMv4vUlZVVh4b">
-    <mxGraphModel dx="1306" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2156" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Ndoymu9ar-45ZAlMpeQ7-2" value="Amazon SQS" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
-          <mxGeometry x="110" y="320" width="80" height="100" as="geometry" />
+        <mxCell id="Ndoymu9ar-45ZAlMpeQ7-2" value="Amazon SQS&lt;div&gt;Received messages ueue&lt;/div&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
+          <mxGeometry x="20" y="294" width="80" height="124" as="geometry" />
         </mxCell>
-        <mxCell id="Ndoymu9ar-45ZAlMpeQ7-3" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="300" y="320" width="69" height="72" as="geometry" />
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ndoymu9ar-45ZAlMpeQ7-3" target="Ndoymu9ar-45ZAlMpeQ7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-2" value="read messages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-1">
+          <mxGeometry x="-0.0182" relative="1" as="geometry">
+            <mxPoint y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ndoymu9ar-45ZAlMpeQ7-3" value="Message prosessing lambda&lt;div&gt;triggered by SQS queue&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="210" y="320" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-3" target="PSyk0_Ey8W_nqYgnj86M-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-3" value="Sending lambda" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-4" value="FInal destination API" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Data_Factory.svg;" vertex="1" parent="1">
+          <mxGeometry x="810" y="324" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-6" value="Amazon SQS" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="420" y="320" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PSyk0_Ey8W_nqYgnj86M-7" target="Ndoymu9ar-45ZAlMpeQ7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-9" value="Put message&lt;div&gt;to queue&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PSyk0_Ey8W_nqYgnj86M-8">
+          <mxGeometry x="0.1655" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PSyk0_Ey8W_nqYgnj86M-7" value="Message trigger&lt;div&gt;for example API Gateway API endpoint&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="294" width="76.5" height="93" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
